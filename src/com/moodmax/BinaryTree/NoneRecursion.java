@@ -39,7 +39,7 @@ public class NoneRecursion {
     //中序遍历
     public void inOrderUnRecur(Node head) {
         Stack<Node> stack = new Stack<Node>();
-        while(!stack.isEmpty() || head != null) {
+            while(!stack.isEmpty() || head != null) {
             if(head != null) {
                 stack.push(head);
                 head = head.left;

@@ -19,7 +19,7 @@ public class Recursion {
     public void preOrderRecur(Node head) {
         if (head==null) //defensive coding
             return;
-        System.out.println(head.value + " ");
+        System.out.print(head.value + " ");
         preOrderRecur(head.left);
         preOrderRecur(head.right);
     }
@@ -29,7 +29,7 @@ public class Recursion {
         if (head==null)
             return;
         inOrderRecur(head.left);
-        System.out.println(head.value + " ");
+        System.out.print(head.value + " ");
         inOrderRecur(head.right);
     }
 
@@ -39,7 +39,7 @@ public class Recursion {
             return;
         posOrderRecur(head.left);
         posOrderRecur(head.right);
-        System.out.println(head.value + " ");
+        System.out.print(head.value + " ");
     }
 
 }
