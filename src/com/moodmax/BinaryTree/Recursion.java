@@ -4,42 +4,40 @@ package com.moodmax.BinaryTree;
 * 用递归的方式实现二叉树的先序、中序和后序遍历
 * */
 public class Recursion {
-
-    public class Node {
+    class Node {
         public int value;
         public Node left;
         public Node right;
 
-        public Node(int value) {
-            this.value = value;
+        public Node(int data) {
+            this.value = data;
         }
     }
 
-    //先序遍历
-    public void preOrderRecur(Node head) {
-        if (head==null) //defensive coding
+    // 先序遍历
+    public static void preOrder(Node head) {
+        if (head == null)
             return;
         System.out.print(head.value + " ");
-        preOrderRecur(head.left);
-        preOrderRecur(head.right);
+        preOrder(head.left);
+        preOrder(head.right);
     }
 
-    //中序遍历
-    public void inOrderRecur(Node head) {
-        if (head==null)
+    // 中序遍历
+    public static void inOrder(Node head) {
+        if(head == null)
             return;
-        inOrderRecur(head.left);
+        inOrder(head.left);
         System.out.print(head.value + " ");
-        inOrderRecur(head.right);
+        inOrder(head.right);
     }
 
-    //后序遍历
-    public void posOrderRecur(Node head) {
-        if (head==null)
+    // 后序遍历
+    public static void lastOrder(Node head) {
+        if(head == null)
             return;
-        posOrderRecur(head.left);
-        posOrderRecur(head.right);
+        lastOrder(head.left);
+        lastOrder(head.right);
         System.out.print(head.value + " ");
     }
-
 }
